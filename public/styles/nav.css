@@ -13,3 +13,15 @@ nav {
 nav #logo {
   font-family: 'Bungee', sans-serif;
  }
+
+.write-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Source sans 3', sans-serif;
+  font-style: normal;
+ }
+
+.fa-angles-down {
+  color:rgba(247, 42, 42, 0.925);
+}

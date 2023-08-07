@@ -1,0 +1,16 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(400px + 320px);
+  width: 100%;
+  background-color: #ff9100;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png");
+}
+
+.name {
+  font-family: 'Source sans 3', sans-serif;
+  color: white;
+  font-style: normal;
+}

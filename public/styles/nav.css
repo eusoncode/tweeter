@@ -5,7 +5,7 @@ nav {
   justify-content: space-between;
   background-color: #4056A1;
   color: white;
-  height: 120px;
+  height: 70px;
   width: 100%;
   padding:0 1.5em;
   position: fixed;
@@ -21,6 +21,7 @@ nav #logo {
   align-items: center;
   font-family: 'Source sans 3', sans-serif;
   font-style: normal;
+  padding-bottom: 5px;
  }
 
 .fa-angles-down {

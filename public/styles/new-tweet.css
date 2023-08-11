@@ -33,3 +33,7 @@ hr {
 .counter {  
   font-family: 'Bungee', sans-serif;
 }
+
+.invalid {
+  color: red;
+}

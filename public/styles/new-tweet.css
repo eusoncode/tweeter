@@ -1,0 +1,35 @@
+.new-tweet form{
+  border: none;
+}
+
+hr {
+  height: 2px;
+  background-color: #545149;
+}
+
+#tweet-text{
+  outline: none;
+  border: none;
+  resize: none;
+  background-color: transparent;
+  width: 100%;
+  height: 30px;
+}
+
+.new-tweet button {
+  font-family: 'Bungee', sans-serif;
+  background-color: #4056A1;
+  color: white;
+  border: none;
+  height: 40px;
+  padding: 5px 10px 5px 10px;
+}
+
+.submit-counter-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.counter {  
+  font-family: 'Bungee', sans-serif;
+}

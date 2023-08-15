@@ -36,7 +36,7 @@
         <i class="fa-solid fa-angles-down fa-fade"></i>
       </div>
     </nav>
-    <header>
+    <header class="main-header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -55,7 +55,8 @@
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
       </p>
-      <section class="new-tweet">
+
+      <section class="new-tweet-container">
         <h2>Compose Tweet</h2>
         <form action="/tweets/" method="POST">
           <label for="tweet-text">What are you humming about?</label>
@@ -67,6 +68,33 @@
           </div>
         </form>
       </section>
+
+      <section class="second-tweet-container">
+        <article>
+          <header>
+            <div class="user-icons">
+              <i class="fa-solid fa-user"></i> 
+              <span class="user-name">John Doe</span>
+            </div>
+            <span class="user-handle">@johndoe</span>
+          </header>
+          <div class="tweet-content">
+            <p>If I have seen further it is by standing on the shoulders of giants.</p>
+          </div>
+
+          <hr>
+
+          <footer class="tweet-footer">
+            <output name="counter2" class="lastVist" for="tweet-text">10 <span>days ago</span></output>
+            <span class="hover-icons">
+              <i class="fa-sharp fa-solid fa-flag"></i>
+              <i class="fas fa-retweet"></i>
+              <i class="fas fa-heart"></i>              
+            </span>            
+          </footer>
+        </article>
+      </section>
+      
     </main>
   </body>
 </html>

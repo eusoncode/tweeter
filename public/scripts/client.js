@@ -34,7 +34,6 @@ const tweetData = [
 // Render tweets in the main page
 const renderTweets = function (tweetData) {
   for (let tweet of tweetData) {
-    console.log(tweet);
     const tweetArticle = createTweetElement(tweet);
     $(`#tweet-container`).append(tweetArticle);
   }
@@ -70,4 +69,24 @@ const createTweetElement = function (tweetData) {
 // Execute the wrapped code when the DOM is ready
 $(document).ready(() => {
   renderTweets(tweetData);
+
+  // Add event listener to prevent default page refresh on form submit
+  const $submitTweet = $('#new-tweet-container');
+
+  $submitTweet.on('submit', (event) => {
+    event.preventDefault();
+    const $tweet = $('#tweet-text').serialize(); //convert the form data into a query string
+        
+    $.ajax({
+      type: 'POST',
+      url: 'http://localhost:8080/tweets',
+      data: $tweet,
+      success: function (response) {
+        console.log('Success:', response);
+      },
+      error: function (xhr, status, error) {
+        console.log('Error:', error);
+      }
+    });
+  })
 });

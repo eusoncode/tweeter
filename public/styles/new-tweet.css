@@ -5,15 +5,18 @@
 hr {
   height: 2px;
   background-color: #545149;
+  margin-top: 0px;
 }
 
 #tweet-text{
   outline: none;
   border: none;
   resize: none;
+  margin-top: 15px;
   background-color: transparent;
   width: 100%;
-  height: 30px;
+  height: 25px;
+  align-content: flex-end;
 }
 
 #new-tweet-container button {
@@ -47,6 +50,14 @@ hr {
   width: 25em;
   padding: 0px 20px;
   margin-bottom: 15px;
+}
+
+#new-tweet-container #tweet:hover {
+  box-shadow:
+    4px 4px 1px #df761a,
+    /* Outer outline */
+    inset 4px 2px #df761a;
+  /* Inner shadow */
 }
 
 #tweet-container article:hover {

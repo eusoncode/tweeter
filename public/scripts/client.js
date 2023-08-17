@@ -4,35 +4,9 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Define the hard coded tweets
-const tweetData = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1691486813224
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
-
 // Render tweets in the main page
 const renderTweets = function (tweetData) {
+  console.log(tweetData);
   for (let tweet of tweetData) {
     const tweetArticle = createTweetElement(tweet);
     $(`#tweet-container`).append(tweetArticle);
@@ -41,6 +15,7 @@ const renderTweets = function (tweetData) {
 
 // Define a function to handle each tweet Data
 const createTweetElement = function (tweetData) {
+  const timePassed = timeago.format(tweetData.created_at, 'en_CA');
   const tweetArticle = `
     <article>
       <header>
@@ -51,11 +26,11 @@ const createTweetElement = function (tweetData) {
         <p class="user-handle"> ${tweetData.user.handle} </p> 
       </header>
       <div class="tweet-content">
-        <p> <h4>${tweetData.content.text}</h4> </p>
+        <p><h4>${tweetData.content.text}</h4></p>
       </div>      
       <hr>
       <footer class="tweet-footer">
-        <output name="counter2" class="lastVist" for="tweet-text">${tweetData.created_at}<span> days ago</span></output>
+        <output name="counter2" class="lastVist" for="tweet-text">${timePassed}</output>
         <span class="hover-icons">
           <i class="fa-sharp fa-solid fa-flag"></i>
           <i class="fas fa-retweet"></i>
@@ -68,7 +43,6 @@ const createTweetElement = function (tweetData) {
 
 // Execute the wrapped code when the DOM is ready
 $(document).ready(() => {
-  renderTweets(tweetData);
 
   // Add event listener to prevent default page refresh on form submit
   const $submitTweet = $('#new-tweet-container');
@@ -89,4 +63,20 @@ $(document).ready(() => {
       }
     });
   })
+
+  const loadTweets = function () {
+    $.ajax({ //use ajax to send the GET tweets from /tweets page
+      type: "GET",
+      url: "http://localhost:8080/tweets",
+      success: function (response) {
+        console.log("Success: tweets loaded", response);
+        renderTweets(response);
+      },
+      error: function (xhr, status, error) {
+        console.log("Error: tweets not loaded", error);
+      }
+    });
+  };
+
+  loadTweets();
 });

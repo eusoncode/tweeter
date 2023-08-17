@@ -46,7 +46,7 @@ hr {
 #tweet-container article{
   margin-top: 50px;
   border: 3px solid #545149;
-  height: 250px;
+  height: 150px;
   width: 25em;
   padding: 0px 20px;
   margin-bottom: 15px;
@@ -74,24 +74,33 @@ hr {
   justify-content: space-between;
   align-items: flex-start;
   padding: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 .user-icons {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+  height: 50px;
 }
 
 .user-icons img {
+  display: flex;
   margin-right: 8px;
   height: 40px;
   width: 40px;
+}
+
+.user-icons p {
+  margin-top: 8px;
 }
 
 .user-name {
   display: flex;
   align-items: center;
   font-size: medium; 
+  margin-top: 16px;
 }
 
 .user-handle {
@@ -102,6 +111,14 @@ hr {
 
 .tweet-content {
   font-size: medium;
+}
+
+.tweet-content p{
+  margin: 9px 0 9px 0;
+}
+
+.tweet-content h4{
+  margin: 9px 0 9px 0;
 }
 
 .tweet-footer {

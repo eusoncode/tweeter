@@ -19,6 +19,10 @@ hr {
   align-content: flex-end;
 }
 
+.label {
+  font-size: 20px;  
+}
+
 #new-tweet-container button {
   font-family: 'Bungee', sans-serif;
   background-color: #4056A1;

@@ -1,12 +1,5 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 // Render tweets in the main page
 const renderTweets = function (tweetData) {
-  // console.log(tweetData);
   for (let tweet of tweetData) {
     const tweetArticle = createTweetElement(tweet);
     $(`#tweet-container`).append(tweetArticle);
@@ -71,6 +64,8 @@ $(document).ready(() => {
       data: $tweet,
       success: function (response) {
         console.log('Success:', response);
+        // Load the latest tweets after successfully posting
+        loadTweets();
       },
       error: function (xhr, status, error) {
         console.log('Error:', error);

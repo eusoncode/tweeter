@@ -1,4 +1,4 @@
-.new-tweet-container form{
+#new-tweet-container form{
   border: none;
 }
 
@@ -16,7 +16,7 @@ hr {
   height: 30px;
 }
 
-.new-tweet-container button {
+#new-tweet-container button {
   font-family: 'Bungee', sans-serif;
   background-color: #4056A1;
   color: white;
@@ -40,15 +40,16 @@ hr {
 
 /* Second-Tweet */
 
-.second-tweet-container {
+#tweet-container article{
   margin-top: 50px;
   border: 3px solid #545149;
-  height: 170px;
+  height: 250px;
   width: 25em;
   padding: 0px 20px;
+  margin-bottom: 15px;
 }
 
-.second-tweet-container:hover {
+#tweet-container article:hover {
   box-shadow:
     4px 4px 1px #4056A1,
     /* Outer outline */
@@ -56,7 +57,7 @@ hr {
   /* Inner shadow */
 }
 
-.second-tweet-container header{
+#tweet-container header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -70,10 +71,16 @@ hr {
   flex-direction: row;
 }
 
+.user-icons img {
+  margin-right: 8px;
+  height: 40px;
+  width: 40px;
+}
+
 .user-name {
   display: flex;
   align-items: center;
-  font-size: medium;  
+  font-size: medium; 
 }
 
 .user-handle {
@@ -82,8 +89,8 @@ hr {
   font-size: medium;
 }
 
-.user-icons .fa-user {
-  margin-right: 8px;
+.tweet-content {
+  font-size: medium;
 }
 
 .tweet-footer {
@@ -91,10 +98,6 @@ hr {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: medium;
-}
-
-.tweet-content {
   font-size: medium;
 }
 

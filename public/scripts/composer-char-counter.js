@@ -1,8 +1,8 @@
 
-$(document).ready(function() {
+$(document).ready(() => {
   $('#tweet-text').on('input', function() {
     const charCount = $(this).val().length; // Get the character count
-    const $counter = $(this).closest('.new-tweet').find('.counter'); // Get the counter element
+    const $counter = $(this).closest('#new-tweet-container').find('.counter'); // Get the counter element
     $counter.text(140 - charCount); // Update the counter text
 
     //   // Add or remove the "invalid" class based on the character left
@@ -13,5 +13,4 @@ $(document).ready(function() {
     }
 
   });
-
 });

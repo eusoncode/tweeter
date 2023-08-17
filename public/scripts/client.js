@@ -6,7 +6,7 @@
 
 // Render tweets in the main page
 const renderTweets = function (tweetData) {
-  console.log(tweetData);
+  // console.log(tweetData);
   for (let tweet of tweetData) {
     const tweetArticle = createTweetElement(tweet);
     $(`#tweet-container`).append(tweetArticle);
@@ -49,9 +49,23 @@ $(document).ready(() => {
 
   $submitTweet.on('submit', (event) => {
     event.preventDefault();
+
+    const tweetlength = $('#tweet-text').val().length;
+    const charLimit = 140;
     const $tweet = $('#tweet-text').serialize(); //convert the form data into a query string
-        
-    $.ajax({
+
+    // Validate the tweet content
+    if (!$tweet || tweetlength === 0) {
+      alert("Tweet content cannot be empty. Please write a tweet..");
+      return;
+    }
+
+    if (tweetlength > charLimit) {
+      alert(`Tweet exceeds character limit of ${charLimit} ...`);
+      return;
+    }
+     
+    $.ajax({ // Use ajax to send POST request to the server endpoint "/tweets"
       type: 'POST',
       url: 'http://localhost:8080/tweets',
       data: $tweet,

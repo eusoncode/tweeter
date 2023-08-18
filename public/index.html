@@ -6,7 +6,7 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-
+    
     <!-- Font styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,7 +56,7 @@
     <main class="container">
 
       <section id="new-tweet-container">
-        <h2>Compose Tweet</h2>
+        <h2>Compose Tweet</h2>              
         <form>
           <label class="label" for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
@@ -66,6 +66,7 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+        <div id="error-message" class="error-message"></div>  
       </section>
 
       <section id="tweet-container"></section>

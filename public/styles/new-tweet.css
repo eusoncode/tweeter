@@ -45,6 +45,17 @@ hr {
   color: red;
 }
 
+.error-message {
+  display: flex;
+  justify-content: Center;
+  background-color: none;
+  color: #f10b0bed;
+  border: none;
+  padding: 5px 0 5px 0;
+  margin: 10px;
+}
+
+
 /* Second-Tweet */
 
 #tweet-container article{

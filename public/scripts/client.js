@@ -1,5 +1,5 @@
 // Render tweets in the main page
-const renderTweets = function (tweetData) {
+const renderTweets = function(tweetData) {
   for (let tweet of tweetData) {
     const tweetArticle = createTweetElement(tweet);
     $(`#tweet-container`).prepend(tweetArticle);
@@ -8,7 +8,7 @@ const renderTweets = function (tweetData) {
 };
 
 // Define a function to handle each tweet Data
-const createTweetElement = function (tweetData) {
+const createTweetElement = function(tweetData) {
   const timePassed = timeago.format(tweetData.created_at, 'en_CA');
   const tweetArticle = `
     <article>
@@ -37,6 +37,7 @@ const createTweetElement = function (tweetData) {
 
 // Execute the wrapped code when the DOM is ready
 $(document).ready(() => {
+  $("#error-message").hide(); // Hide the error message before validation
 
   // Add event listener to prevent default page refresh on form submit
   const $submitTweet = $('#new-tweet-container');
@@ -50,12 +51,23 @@ $(document).ready(() => {
 
     // Validate the tweet content
     if (!$tweet || tweetlength === 0) {
-      alert("Tweet content cannot be empty. Please write a tweet..");
-      return;
+      $("#error-message").text("!!!⚠️Tweet content cannot be empty. Please write a tweet..⚠️!!!");
+      $("#error-message").slideDown();
+      // Slide up the error message after 10 seconds
+      setTimeout(function() {
+        $("#error-message").slideUp();
+      }, 10000); // 10000 milliseconds = 10 seconds
     }
 
     if (tweetlength > charLimit) {
-      alert(`Tweet exceeds character limit of ${charLimit} ...`);
+      $("#error-message").text(`!!!⚠️Tweet exceeds character limit of ${charLimit} ...!!!⚠️`);
+      $("#error-message").slideDown();
+
+      // Slide up the error message after 10 seconds
+      setTimeout(function() {
+        $("#error-message").slideUp();
+      }, 10000); // 10000 milliseconds = 10 seconds     
+      
       return;
     }
      
@@ -63,26 +75,26 @@ $(document).ready(() => {
       type: 'POST',
       url: 'http://localhost:8080/tweets',
       data: $tweet,
-      success: function (response) {
+      success: function(response) {
         console.log('Success:', response);
         // Load the latest tweets after successfully posting
         loadTweets();
       },
-      error: function (xhr, status, error) {
+      error: function(xhr, status, error) {
         console.log('Error:', error);
       }
     });
-  })
+  });
 
-  const loadTweets = function () {
+  const loadTweets = function() {
     $.ajax({ //use ajax to send the GET tweets from /tweets page
       type: "GET",
       url: "http://localhost:8080/tweets",
-      success: function (response) {
+      success: function(response) {
         console.log("Success: tweets loaded", response);
         renderTweets(response);
       },
-      error: function (xhr, status, error) {
+      error: function(xhr, status, error) {
         console.log("Error: tweets not loaded", error);
       }
     });
@@ -92,9 +104,8 @@ $(document).ready(() => {
 });
 
 // Add Cross-Site Scripting
-const escape = function (str) {
+const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
-  console.log(div.innerHTML);
   return div.innerHTML;
 };

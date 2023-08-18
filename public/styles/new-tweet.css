@@ -1,5 +1,12 @@
+#new-tweet-container {
+  margin-top: 50px;  
+  width: 90%;
+}
+
 #new-tweet-container form{
-  border: none;
+  border: none;  
+  width: 100%;  
+  font-size: 20px; 
 }
 
 hr {
@@ -19,8 +26,9 @@ hr {
   align-content: flex-end;
 }
 
-.label {
-  font-size: 20px;  
+.submit-counter-box {
+  display: flex;
+  justify-content: space-between;
 }
 
 #new-tweet-container button {
@@ -32,9 +40,12 @@ hr {
   padding: 5px 10px 5px 10px;
 }
 
-.submit-counter-box {
-  display: flex;
-  justify-content: space-between;
+#new-tweet-container button:hover {
+  box-shadow:
+    4px 4px 1px #df761a,
+    /* Outer outline */
+    inset 4px 2px #df761a;
+  /* Inner shadow */
 }
 
 .counter {  
@@ -55,24 +66,21 @@ hr {
   margin: 10px;
 }
 
+/* Second-Tweet ---------------------------------------------------------------------- */
 
-/* Second-Tweet */
-
-#tweet-container article{
-  margin-top: 50px;
-  border: 3px solid #545149;
-  height: 150px;
-  width: 25em;
-  padding: 0px 20px;
-  margin-bottom: 15px;
+#tweet-container{
+  width: 90%;
 }
 
-#new-tweet-container #tweet:hover {
-  box-shadow:
-    4px 4px 1px #df761a,
-    /* Outer outline */
-    inset 4px 2px #df761a;
-  /* Inner shadow */
+#tweet-container article{
+  box-sizing: border-box;
+  align-content: flex-end;
+  margin-top: 50px;
+  border: 3px solid #545149;
+  max-height: fit-content;
+  width: 100%;
+  padding: 0px 20px;
+  margin-bottom: 15px;
 }
 
 #tweet-container article:hover {
@@ -86,18 +94,24 @@ hr {
 #tweet-container header{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-content: flex-start;
   padding: 10px;
   margin-bottom: 0px;
 }
 
 .user-icons {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-start;
   align-content: flex-start;
   height: 50px;
+}
+
+.user-icons:hover {  
+  color:coral;
 }
 
 .user-icons img {
@@ -126,14 +140,17 @@ hr {
 
 .tweet-content {
   font-size: medium;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 
-.tweet-content p{
+.text{
   margin: 9px 0 9px 0;
-}
-
-.tweet-content h4{
-  margin: 9px 0 9px 0;
+  width: 100%;
+  max-height: ;
+  word-wrap: break-word;
+  overflow: visible;
 }
 
 .tweet-footer {
@@ -145,9 +162,5 @@ hr {
 }
 
 .hover-icons i:hover {  
-  color:coral;
-}
-
-.user-icons:hover {  
   color:coral;
 }

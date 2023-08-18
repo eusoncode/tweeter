@@ -1,0 +1,47 @@
+/* For smartphone view */
+@media only screen and (max-width: 600px) {
+  nav {
+    background-color: #ff9100;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png");
+  }
+}
+
+
+/* For Tablet view */
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+  nav {
+    background-color: #00ffbf;  
+    color: black;  
+  }
+}
+
+
+
+/* For Desktop view */
+@media only screen and (min-width: 1024px) {
+  .body-content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container {
+    width: 77%;  
+  }
+
+  #new-tweet-container {
+    margin-top: 80px;  
+    width: 90%;
+  }
+
+  .user-icons img {
+    display: flex;
+    margin-right: 8px;
+    height: 20px;
+    width: 30px;
+  }
+
+  .main-header {
+    width: 23.5%;
+    margin: 80px 0 0 10px
+  }
+}

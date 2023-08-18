@@ -20,7 +20,7 @@ const createTweetElement = function (tweetData) {
         <p class="user-handle"> ${tweetData.user.handle} </p> 
       </header>
       <div class="tweet-content">
-        <p><h4>${tweetData.content.text}</h4></p>
+        <p><h4>${escape(tweetData.content.text)}</h4></p>
       </div>      
       <hr>
       <footer class="tweet-footer">
@@ -90,3 +90,11 @@ $(document).ready(() => {
 
   loadTweets();
 });
+
+// Add Cross-Site Scripting
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  console.log(div.innerHTML);
+  return div.innerHTML;
+};

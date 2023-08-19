@@ -1,29 +1,31 @@
+body {
+  font-family: "Bungee", sans-serif;
+  font-family: "Source sans 3", sans-serif;
+}
+
 nav {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-end;
   justify-content: space-between;
-  background-color: #4056A1;
+  background-color: #313ba8;
   color: white;
   height: 70px;
   width: 100%;
-  padding:0 1.5em;
+  padding: 0 1.5em;
   position: fixed;
 }
-
 nav #logo {
-  font-family: 'Bungee', sans-serif;
- }
-
-.write-tweet {
+  font-family: "Bungee", sans-serif;
+}
+nav .write-tweet {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Source sans 3', sans-serif;
+  font-family: "Source sans 3", sans-serif;
   font-style: normal;
   padding-bottom: 5px;
- }
-
-.fa-angles-down {
-  color:rgba(247, 42, 42, 0.925);
+}
+nav .fa-angles-down {
+  color: rgba(247, 42, 42, 0.925);
 }

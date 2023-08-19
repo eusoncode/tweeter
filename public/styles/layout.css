@@ -1,3 +1,8 @@
+body {
+  font-family: "Bungee", sans-serif;
+  font-family: "Source sans 3", sans-serif;
+}
+
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -6,6 +11,7 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -13,24 +19,21 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: 'Source sans 3', sans-serif;
+  font-family: "Source sans 3", sans-serif;
+  /*
+  * Additional CSS can be defined below or in other CSS files, as per instructions
+  */
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
-.container {
+body .container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 90%;  
+  width: 90%;
   margin: 0 auto;
-  background-color:  #f4f1ec;
+  background-color: #f4f1ec;
 }

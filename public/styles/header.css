@@ -1,24 +1,26 @@
+body {
+  font-family: "Bungee", sans-serif;
+  font-family: "Source sans 3", sans-serif;
+}
+
 .main-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: calc(80px + 320px);
+  height: 400px;
   width: 100%;
   background-color: #ff9100;
   background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png");
 }
-
-.name {
-  font-family: 'Source sans 3', sans-serif;
+.main-header img {
+  margin-top: 30px;
+}
+.main-header .name {
+  font-family: "Source sans 3", sans-serif;
   color: white;
   font-style: normal;
 }
-
-.name h2 {
+.main-header .name h2 {
   margin: 10px 0 30px 0;
-}
-
-.main-header img {
-  margin-top: 30px;
 }

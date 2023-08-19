@@ -1,21 +1,23 @@
+body {
+  font-family: "Bungee", sans-serif;
+  font-family: "Source sans 3", sans-serif;
+}
+
 #new-tweet-container {
-  margin-top: 50px;  
+  margin-top: 50px;
   width: 90%;
 }
-
-#new-tweet-container form{
-  border: none;  
-  width: 100%;  
-  font-size: 20px; 
+#new-tweet-container form {
+  border: none;
+  width: 100%;
+  font-size: 20px;
 }
-
-hr {
+#new-tweet-container hr {
   height: 2px;
-  background-color: #545149;
+  background-color: Black;
   margin-top: 0px;
 }
-
-#tweet-text{
+#new-tweet-container #tweet-text {
   outline: none;
   border: none;
   resize: none;
@@ -25,54 +27,43 @@ hr {
   height: 25px;
   align-content: flex-end;
 }
-
-.submit-counter-box {
+#new-tweet-container .submit-counter-box {
   display: flex;
   justify-content: space-between;
 }
-
 #new-tweet-container button {
-  font-family: 'Bungee', sans-serif;
+  font-family: "Bungee", sans-serif;
   background-color: #4056A1;
   color: white;
   border: none;
   height: 40px;
   padding: 5px 10px 5px 10px;
 }
-
 #new-tweet-container button:hover {
-  box-shadow:
-    4px 4px 1px #df761a,
-    /* Outer outline */
-    inset 4px 2px #df761a;
+  box-shadow: 4px 4px 1px #df761a, inset 4px 2px #df761a;
   /* Inner shadow */
 }
-
-.counter {  
-  font-family: 'Bungee', sans-serif;
+#new-tweet-container .counter {
+  font-family: "Bungee", sans-serif;
 }
-
-.invalid {
+#new-tweet-container .invalid {
   color: red;
 }
-
-.error-message {
+#new-tweet-container .error-message {
   display: flex;
   justify-content: Center;
   background-color: none;
-  color: #f10b0bed;
+  color: rgba(241, 11, 11, 0.9294117647);
   border: none;
   padding: 5px 0 5px 0;
   margin: 10px;
 }
 
 /* Second-Tweet ---------------------------------------------------------------------- */
-
-#tweet-container{
+#tweet-container {
   width: 90%;
 }
-
-#tweet-container article{
+#tweet-container article {
   box-sizing: border-box;
   align-content: flex-end;
   margin-top: 50px;
@@ -82,16 +73,11 @@ hr {
   padding: 0px 20px;
   margin-bottom: 15px;
 }
-
 #tweet-container article:hover {
-  box-shadow:
-    4px 4px 1px #4056A1,
-    /* Outer outline */
-    inset 4px 2px #4056A1;
+  box-shadow: 4px 4px 1px #4056A1, inset 4px 2px #4056A1;
   /* Inner shadow */
 }
-
-#tweet-container header{
+#tweet-container header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -100,8 +86,7 @@ hr {
   padding: 10px;
   margin-bottom: 0px;
 }
-
-.user-icons {
+#tweet-container .user-icons {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -109,58 +94,53 @@ hr {
   align-content: flex-start;
   height: 50px;
 }
-
-.user-icons:hover {  
-  color:coral;
-}
-
-.user-icons img {
+#tweet-container .user-icons img {
   display: flex;
   margin-right: 8px;
   height: 40px;
   width: 40px;
 }
-
-.user-icons p {
+#tweet-container .user-icons p {
   margin-top: 8px;
 }
-
-.user-name {
+#tweet-container .user-icons:hover {
+  color: coral;
+}
+#tweet-container .user-name {
   display: flex;
   align-items: center;
-  font-size: medium; 
+  font-size: medium;
   margin-top: 16px;
 }
-
-.user-handle {
+#tweet-container .user-handle {
   opacity: 0.4;
-  color:#4056A1;
+  color: #4056A1;
   font-size: medium;
 }
-
-.tweet-content {
+#tweet-container .tweet-content {
   font-size: medium;
   display: flex;
   flex-wrap: wrap;
   max-width: 100%;
 }
-
-.text{
+#tweet-container hr {
+  height: 2px;
+  background-color: Black;
+  margin-top: 0px;
+}
+#tweet-container .text {
   margin: 9px 0 9px 0;
   width: 100%;
-  max-height: ;
   word-wrap: break-word;
   overflow: visible;
 }
-
-.tweet-footer {
+#tweet-container .tweet-footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   font-size: medium;
 }
-
-.hover-icons i:hover {  
-  color:coral;
+#tweet-container .hover-icons i:hover {
+  color: coral;
 }

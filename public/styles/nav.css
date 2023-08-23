@@ -27,5 +27,8 @@ nav .write-tweet {
   padding-bottom: 5px;
 }
 nav .fa-angles-down {
-  color: rgba(247, 42, 42, 0.925);
+  color: rgb(227, 43, 43);
+}
+nav .fa-angles-down:hover {
+  color: coral;
 }

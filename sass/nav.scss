@@ -14,7 +14,7 @@ nav {
 
   #logo {
     font-family: partial.$primary-font;
-   }
+  }
   
   .write-tweet {
     display: flex;
@@ -23,9 +23,13 @@ nav {
     font-family: partial.$secondary-font;
     font-style: normal;
     padding-bottom: 5px;
-   }
+  }
   
   .fa-angles-down {
-    color:rgba(247, 42, 42, 0.925);
+    color:rgb(227, 43, 43);
+
+    &:hover {  
+      color:coral;
+    }
   }
 }

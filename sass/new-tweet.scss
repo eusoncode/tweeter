@@ -15,7 +15,7 @@
     width: 100%;  
     font-size: 20px; 
   }
-
+  
   hr {
     @include hr;
   }  
@@ -43,16 +43,16 @@
     border: none;
     height: 40px;
     padding: 5px 10px 5px 10px;
+
+    &:hover {
+      box-shadow:
+        4px 4px 1px #df761a,
+        /* Outer outline */
+        inset 4px 2px #df761a;
+      /* Inner shadow */
+    }
   }
-  
-  button:hover {
-    box-shadow:
-      4px 4px 1px #df761a,
-      /* Outer outline */
-      inset 4px 2px #df761a;
-    /* Inner shadow */
-  }
-  
+    
   .counter {  
     font-family: partial.$primary-font;
   }

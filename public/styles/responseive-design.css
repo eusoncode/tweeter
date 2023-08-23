@@ -3,6 +3,11 @@
   nav {
     background-color: #ff9100;
     background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png");
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .main-header img {
+    margin-top: 100px;
   }
 }
 /* For Tablet view */
@@ -10,6 +15,8 @@
   nav {
     background-color: #00ffbf;
     color: black;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
 /* For Desktop view */

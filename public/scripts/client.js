@@ -42,9 +42,24 @@ $(document).ready(() => {
   // Add event listener to prevent default page refresh on form submit
   const $submitTweet = $('#new-tweet-container');
 
+  // Define a variable to keep track of the submitTweet section's visibility state
+  let isTweetContainerVisible = false;
+
+  // Toggle the submitTweet section when the Compose button is clicked
+  $("#toggle-button").click(() => {
+    $submitTweet.slideToggle(300, function() {
+      // Toggle the visibility state
+      isTweetContainerVisible = !isTweetContainerVisible;
+  
+      // If the submitTweet section is visible, focus on the tweet-text textarea
+      if (isTweetContainerVisible) {
+        $("#tweet-text").focus();
+      }
+    });
+  });
+
   $submitTweet.on('submit', (event) => {
     event.preventDefault();
-
     const tweetlength = $('#tweet-text').val().length;
     const charLimit = 140;
     const $tweet = $('#tweet-text').serialize(); //convert the form data into a query string
@@ -66,7 +81,7 @@ $(document).ready(() => {
       // Slide up the error message after 10 seconds
       setTimeout(function() {
         $("#error-message").slideUp();
-      }, 10000); // 10000 milliseconds = 10 seconds     
+      }, 10000); // 10000 milliseconds = 10 seconds
       
       return;
     }
@@ -79,11 +94,24 @@ $(document).ready(() => {
         console.log('Success:', response);
         // Load the latest tweets after successfully posting
         loadTweets();
+
+        // Reset the character counter
+        $(".counter").text(charLimit);
       },
       error: function(xhr, status, error) {
         console.log('Error:', error);
       }
     });
+  });
+  // Add a keydown event listener for Enter key
+  $('#tweet-text').on('keydown', (event) => {
+    // Check if the Enter key (key code 13) is pressed
+    if (event.keyCode === 13 && !event.shiftKey) {
+      event.preventDefault(); // Prevent default Enter behavior (line break)
+
+      // Trigger the form submission
+      $submitTweet.submit();
+    }
   });
 
   const loadTweets = function() {

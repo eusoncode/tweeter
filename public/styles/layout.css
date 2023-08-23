@@ -21,7 +21,7 @@ html {
  */
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: beige;
   font-size: 24px;
   font-family: "Source sans 3", sans-serif;
   /*
@@ -35,5 +35,5 @@ body .container {
   align-items: center;
   width: 90%;
   margin: 0 auto;
-  background-color: #f4f1ec;
+  background-color: beige;
 }

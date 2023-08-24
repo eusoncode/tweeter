@@ -21,14 +21,20 @@ Students can fork and clone this repository, to practice their HTML, CSS, JS, jQ
 - Chance
 - md5
 
+## Usage
+
+- Click the down arrow at the nav bar to write a tweet.
+- Click the up arrow in a circle to jump back up to the latest tweet.
+- Ensure to maintain maximum of 140 text characters per tweet.
+
 
 ## Screenshots
 
-!["Screenshot of a desktop view of tweeter"]()
+!["Screenshot of a desktop view of tweeter"](https://github.com/eusoncode/tweeter/blob/master/docs/Tweet_desktop.png)
 
-!["Screenshot of an tablet view of tweeter"]()
+!["Screenshot of an tablet view of tweeter"](https://github.com/eusoncode/tweeter/blob/master/docs/Tweeter_tablet.png)
 
-!["Screenshot of a smartphone view of tweeter"]()
+!["Screenshot of a smartphone view of tweeter"](https://github.com/eusoncode/tweeter/blob/master/docs/Tweeter_smartphone.png)
 
-!["Screenshot of a smartphone view with scrollUpButton of tweeter"]()
+!["Screenshot of a smartphone view with scrollUpButton of tweeter"](https://github.com/eusoncode/tweeter/blob/master/docs/Tweet_smartphone_scrollUpButton)
 

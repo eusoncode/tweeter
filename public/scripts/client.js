@@ -40,23 +40,7 @@ $(document).ready(() => {
   $("#error-message").hide(); // Hide the error message before validation
 
   // Add event listener to prevent default page refresh on form submit
-  const $submitTweet = $('#new-tweet-container');
-
-  // Define a variable to keep track of the submitTweet section's visibility state
-  let isTweetContainerVisible = false;
-
-  // Toggle the submitTweet section when the Compose button is clicked
-  $("#toggle-button").click(() => {
-    $submitTweet.slideToggle(300, function() {
-      // Toggle the visibility state
-      isTweetContainerVisible = !isTweetContainerVisible;
-  
-      // If the submitTweet section is visible, focus on the tweet-text textarea
-      if (isTweetContainerVisible) {
-        $("#tweet-text").focus();
-      }
-    });
-  });
+  const $submitTweet = $('#new-tweet-container');  
 
   $submitTweet.on('submit', (event) => {
     event.preventDefault();
@@ -68,21 +52,12 @@ $(document).ready(() => {
     if (!$tweet || tweetlength === 0) {
       $("#error-message").text("!!!⚠️Tweet content cannot be empty. Please write a tweet..⚠️!!!");
       $("#error-message").slideDown();
-      // Slide up the error message after 10 seconds
-      setTimeout(function() {
-        $("#error-message").slideUp();
-      }, 10000); // 10000 milliseconds = 10 seconds
+      return;
     }
 
     if (tweetlength > charLimit) {
       $("#error-message").text(`!!!⚠️Tweet exceeds character limit of ${charLimit} ...!!!⚠️`);
-      $("#error-message").slideDown();
-
-      // Slide up the error message after 10 seconds
-      setTimeout(function() {
-        $("#error-message").slideUp();
-      }, 10000); // 10000 milliseconds = 10 seconds
-      
+      $("#error-message").slideDown();      
       return;
     }
      
@@ -97,6 +72,9 @@ $(document).ready(() => {
 
         // Reset the character counter
         $(".counter").text(charLimit);
+        
+        //Error slides up after a successful submit
+        $("#error-message").slideUp();
       },
       error: function(xhr, status, error) {
         console.log('Error:', error);

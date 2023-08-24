@@ -31,6 +31,7 @@
   }
   .body-content .container {
     width: 77%;
+    margin-top: 30px;
   }
   .body-content .container #new-tweet-container {
     margin-top: 80px;

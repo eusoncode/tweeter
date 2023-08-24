@@ -8,8 +8,8 @@ nav {
   flex-wrap: wrap;
   align-content: flex-end;
   justify-content: space-between;
-  background-color: #313ba8;
-  color: white;
+  background-color: #4056A1;
+  color: #ffffff;
   height: 70px;
   width: 100%;
   padding: 0 1.5em;
@@ -27,8 +27,8 @@ nav .write-tweet {
   padding-bottom: 5px;
 }
 nav .fa-angles-down {
-  color: rgb(227, 43, 43);
+  color: #fdfbfb;
 }
 nav .fa-angles-down:hover {
-  color: coral;
+  color: rgb(214, 33, 33);
 }

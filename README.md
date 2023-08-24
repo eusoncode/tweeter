@@ -31,14 +31,14 @@ Students can fork and clone this repository, to practice their HTML, CSS, JS, jQ
 ## Screenshots
 
 Desktop view of tweeter
-!["Screenshot of a desktop view of tweeter"](https://github.com/eusoncode/tweeter/blob/master/docs/Tweet_desktop.png)
+!["Screenshot of a desktop view of tweeter"](https://github.com/eusoncode/tweeter/blob/master/docs/Tweeter_desktop.png)
 
-
+Tablet view of tweeter
 !["Screenshot of an tablet view of tweeter"](https://github.com/eusoncode/tweeter/blob/master/docs/Tweeter_tablet.png)
 
-
+Smartphone view of tweeter
 !["Screenshot of a smartphone view of tweeter"](https://github.com/eusoncode/tweeter/blob/master/docs/Tweeter_smartphone.png)
 
-
-!["Screenshot of a smartphone view with scrollUpButton of tweeter"](https://github.com/eusoncode/tweeter/blob/master/docs/Tweet_smartphone_scrollUpButton)
+Smartphone view with scrollUpButton of tweeter
+!["Screenshot of a smartphone view with scrollUpButton of tweeter"](https://github.com/eusoncode/tweeter/blob/master/docs/Tweeter_smartphone_scrollUpButton.png)
 

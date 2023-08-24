@@ -15,10 +15,10 @@ nav {
   padding: 0 1.5em;
   position: fixed;
 }
-nav #logo {
+#logo {
   font-family: "Bungee", sans-serif;
 }
-nav .write-tweet {
+.write-tweet {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,9 +26,9 @@ nav .write-tweet {
   font-style: normal;
   padding-bottom: 5px;
 }
-nav .fa-angles-down {
+.fa-angles-down {
   color: #fdfbfb;
 }
-nav .fa-angles-down:hover {
+.fa-angles-down:hover {
   color: rgb(214, 33, 33);
 }

@@ -13,10 +13,13 @@
 /* For Tablet view */
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
   nav {
-    background-color: #00ffbf;
-    color: black;
+    background-color: #5ff0af;
+    color: #ffffff;
     padding-right: 10px;
     padding-left: 10px;
+  }
+  img {
+    padding-top: 80px;
   }
 }
 /* For Desktop view */

@@ -17,7 +17,7 @@ body {
   background-color: Black;
   margin-top: 0px;
 }
-#new-tweet-container #tweet-text {
+#tweet-text {
   outline: none;
   border: none;
   resize: none;
@@ -28,7 +28,7 @@ body {
   height: 25px;
   align-content: flex-end;
 }
-#new-tweet-container .submit-counter-box {
+.submit-counter-box {
   display: flex;
   justify-content: space-between;
 }
@@ -44,13 +44,13 @@ body {
   box-shadow: 4px 4px 1px #df761a, inset 4px 2px #df761a;
   /* Inner shadow */
 }
-#new-tweet-container .counter {
+.counter {
   font-family: "Bungee", sans-serif;
 }
-#new-tweet-container .invalid {
+.invalid {
   color: red;
 }
-#new-tweet-container .error-message {
+.error-message {
   display: flex;
   justify-content: Center;
   background-color: none;
@@ -87,7 +87,7 @@ body {
   padding: 10px;
   margin-bottom: 0px;
 }
-#tweet-container .user-icons {
+.user-icons {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -95,30 +95,30 @@ body {
   align-content: flex-start;
   height: 50px;
 }
-#tweet-container .user-icons img {
+.user-icons img {
   display: flex;
   margin-right: 8px;
   height: 40px;
   width: 40px;
 }
-#tweet-container .user-icons p {
+.user-icons p {
   margin-top: 8px;
 }
-#tweet-container .user-icons:hover {
+.user-icons:hover {
   color: coral;
 }
-#tweet-container .user-name {
+.user-name {
   display: flex;
   align-items: center;
   font-size: medium;
   margin-top: 16px;
 }
-#tweet-container .user-handle {
+.user-handle {
   opacity: 0.4;
   color: #4056A1;
   font-size: medium;
 }
-#tweet-container .tweet-content {
+.tweet-content {
   font-size: medium;
   display: flex;
   flex-wrap: wrap;
@@ -129,20 +129,20 @@ body {
   background-color: Black;
   margin-top: 0px;
 }
-#tweet-container .text {
+.text {
   margin: 9px 0 9px 0;
   width: 100%;
   word-wrap: break-word;
   overflow: visible;
 }
-#tweet-container .tweet-footer {
+.tweet-footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   font-size: medium;
 }
-#tweet-container .hover-icons i:hover {
+.hover-icons i:hover {
   color: coral;
 }
 

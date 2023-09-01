@@ -1,9 +1,10 @@
 // Render tweets in the main page
-const renderTweets = function(tweetData) {
+const renderTweets = function (tweetData) {
+  $('#tweet-container').empty(); // Clear duplicate tweets
   for (let tweet of tweetData) {
     const tweetArticle = createTweetElement(tweet);
     $(`#tweet-container`).prepend(tweetArticle);
-    $('#tweet-text').val('');
+    $('#tweet-text').val(''); // Clear the form after submission
   }
 };
 

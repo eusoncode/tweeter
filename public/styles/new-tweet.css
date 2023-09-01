@@ -17,7 +17,7 @@ body {
   background-color: Black;
   margin-top: 0px;
 }
-#tweet-text {
+#new-tweet-container #tweet-text {
   outline: none;
   border: none;
   resize: none;
@@ -28,7 +28,7 @@ body {
   height: 25px;
   align-content: flex-end;
 }
-.submit-counter-box {
+#new-tweet-container .submit-counter-box {
   display: flex;
   justify-content: space-between;
 }
@@ -44,13 +44,13 @@ body {
   box-shadow: 4px 4px 1px #df761a, inset 4px 2px #df761a;
   /* Inner shadow */
 }
-.counter {
+#new-tweet-container .counter {
   font-family: "Bungee", sans-serif;
 }
-.invalid {
+#new-tweet-container .invalid {
   color: red;
 }
-.error-message {
+#new-tweet-container .error-message {
   display: flex;
   justify-content: Center;
   background-color: none;
@@ -87,7 +87,7 @@ body {
   padding: 10px;
   margin-bottom: 0px;
 }
-.user-icons {
+#tweet-container .user-icons {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -95,30 +95,30 @@ body {
   align-content: flex-start;
   height: 50px;
 }
-.user-icons img {
+#tweet-container .user-icons img {
   display: flex;
   margin-right: 8px;
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
 }
-.user-icons p {
+#tweet-container .user-icons p {
   margin-top: 8px;
 }
-.user-icons:hover {
+#tweet-container .user-icons:hover {
   color: coral;
 }
-.user-name {
+#tweet-container .user-name {
   display: flex;
   align-items: center;
   font-size: medium;
   margin-top: 16px;
 }
-.user-handle {
+#tweet-container .user-handle {
   opacity: 0.4;
   color: #4056A1;
   font-size: medium;
 }
-.tweet-content {
+#tweet-container .tweet-content {
   font-size: medium;
   display: flex;
   flex-wrap: wrap;
@@ -129,20 +129,20 @@ body {
   background-color: Black;
   margin-top: 0px;
 }
-.text {
+#tweet-container .text {
   margin: 9px 0 9px 0;
   width: 100%;
   word-wrap: break-word;
   overflow: visible;
 }
-.tweet-footer {
+#tweet-container .tweet-footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   font-size: medium;
 }
-.hover-icons i:hover {
+#tweet-container .hover-icons i:hover {
   color: coral;
 }
 
@@ -155,7 +155,7 @@ body {
   background-color: #4056A1;
   border: none;
   border-radius: 50%;
-  color: white;
+  color: #f40f0f;
   font-size: 20px;
   cursor: pointer;
 }

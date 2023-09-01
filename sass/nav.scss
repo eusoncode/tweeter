@@ -26,10 +26,11 @@ nav {
   }
   
   .fa-angles-down {
-    color:#fdfbfb;
+    color: #d62121;
 
     &:hover {  
-      color:rgb(214, 33, 33);
+      color: #fdfbfb; 
+      cursor: pointer;
     }
   }
 }

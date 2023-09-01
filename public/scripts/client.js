@@ -45,7 +45,7 @@ $(document).ready(() => {
 
   $submitTweet.on('submit', (event) => {
     event.preventDefault();
-    const tweetlength = $('#tweet-text').val().length;
+    const tweetlength = $('#tweet-text').val().trim().length;
     const charLimit = 140;
     const $tweet = $('#tweet-text').serialize(); //convert the form data into a query string
 

@@ -106,6 +106,7 @@ body {
 }
 #tweet-container .user-icons:hover {
   color: coral;
+  cursor: pointer;
 }
 #tweet-container .user-name {
   display: flex;
